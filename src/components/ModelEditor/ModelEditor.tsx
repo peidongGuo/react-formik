@@ -18,9 +18,9 @@ import { IModel, IModelProperty, Model, PropertyType } from './Model';
 import PropertyRow from './PropertyRow/PropertyRow';
 
 interface Props {
-  example: any;
-  model: IModel;
-  onModelChange: (model: IModel, example: any) => void;
+  example?: any;
+  model?: IModel;
+  onModelChange?: (model: IModel, example: any) => void;
 }
 
 interface State {
@@ -197,6 +197,7 @@ class ModelEditor extends React.Component<Props, State> {
           //   }}
           //   whenChange={console.log}
           // />
+          <div />
         )
       }
     ];
@@ -247,7 +248,7 @@ class ModelEditor extends React.Component<Props, State> {
         const schema = GenerateSchema.json('User', data);
         this.model = Model.parseModel(data as object, 'User');
         console.log('object updated', data, schema);
-        this.props.onModelChange(toJS(this.model), toJS(this.exampleObject));
+        // this.props.onModelChange(toJS(this.model), toJS(this.exampleObject));
       }
     }
   };
@@ -278,13 +279,13 @@ class ModelEditor extends React.Component<Props, State> {
 
   handleDeleteProp = (prop: IModelProperty) => {
     unset(this.model.properties, prop.path.slice(2));
-    this.props.onModelChange(toJS(this.model), toJS(this.exampleObject));
+    // this.props.onModelChange(toJS(this.model), toJS(this.exampleObject));
   };
 
   handlePropChange = (prop: IModelProperty) => {
     assign(this.propOnEdit, toJS(prop));
     console.log('updated prop', toJS(prop), toJS(this.propOnEdit));
-    this.props.onModelChange(toJS(this.model), toJS(this.exampleObject));
+    // this.props.onModelChange(toJS(this.model), toJS(this.exampleObject));
   };
 
   handlePropOnHoldChange = (prop: IModelProperty): void => {
