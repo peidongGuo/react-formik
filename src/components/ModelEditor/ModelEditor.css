@@ -1,0 +1,11 @@
+@import url(~codemirror/lib/codemirror.css);
+@import url(~codemirror/theme/neat.css);
+.model-props {
+  margin-left: -1.5em; }
+
+.react-codemirror2 {
+  flex-grow: 1;
+  display: flex; }
+
+.steps-content {
+  padding: 1em; }
