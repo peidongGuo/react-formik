@@ -3,17 +3,20 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "antd": "^3.11.6",
+    "antd": "^3.12.1",
     "codemirror": "^5.42.2",
+    "formik": "^1.4.1",
     "generate-schema": "^2.6.0",
     "hjson": "^3.1.2",
+    "json-schema-to-yup": "^1.8.7",
     "lodash": "^4.17.11",
     "mobx": "^5.8.0",
     "mobx-react": "^5.4.3",
     "react": "^16.7.0",
     "react-codemirror2": "^5.1.0",
     "react-dom": "^16.7.0",
-    "react-scripts-ts": "3.1.0"
+    "react-scripts-ts": "3.1.0",
+    "yup": "^0.26.6"
   },
   "scripts": {
     "build-css": "node-sass-chokidar --include-path ./src --include-path ./node_modules src/ -o src/",
@@ -25,11 +28,11 @@
     "eject": "react-scripts-ts eject"
   },
   "devDependencies": {
+    "@types/codemirror": "^0.0.56",
     "@types/jest": "^23.3.10",
     "@types/node": "^10.12.18",
     "@types/react": "^16.7.18",
     "@types/react-dom": "^16.0.11",
-    "@types/codemirror": "^0.0.56",
     "node-sass-chokidar": "^0.0.3",
     "npm-run-all": "^4.1.2",
     "typescript": "^3.2.2"
