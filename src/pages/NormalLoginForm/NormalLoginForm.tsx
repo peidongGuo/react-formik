@@ -2,7 +2,7 @@ import * as React from 'react';
 import 'antd/dist/antd.css';
 import './NormalLoginForm.css';
 import { Form, Icon, Input, Button, Checkbox } from 'antd';
-import { Formik } from 'formik';
+import { Formik, Field } from 'formik';
 import * as Yup from 'yup';
 interface Props {}
 
@@ -38,13 +38,25 @@ class NormalLoginForm extends React.Component<Props, State> {
                 validateStatus={errors && errors.username ? 'error' : ''}
                 help={errors && errors.username ? errors.username : ''}
               >
-                <Input
+                {/*可行方式一： */}
+                {/* <Input
                   name="username"
                   value={values.username}
                   onChange={handleChange}
                   onBlur={handleBlur}
                   prefix={<Icon type="user" style={{ color: 'rgba(0,0,0,.25)' }} />}
                   placeholder="Username"
+                /> */}
+                {/*可行方式二： */}
+                <Field
+                  name="username"
+                  render={({ field /* _form */ }) => (
+                    <Input
+                      {...field}
+                      prefix={<Icon type="user" style={{ color: 'rgba(0,0,0,.25)' }} />}
+                      placeholder="Username"
+                    />
+                  )}
                 />
               </Form.Item>
               <Form.Item

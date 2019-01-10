@@ -70,14 +70,15 @@ class PreviewForm extends React.Component<Props, State> {
     };
 
     const yupSchema = buildYup(this.dynamicJsonSchema, this.errorMessagesConfig);
-    // const valid = await yupSchema.isValid({
-    //   name: 'jimmy',
-    //   age: 24
-    // });
+    const valid = await yupSchema.isValid({
+      name: 'jimmy',
+      email: 'gpd_wfe@163.com',
+      age: 24
+    });
 
-    // console.log({
-    //   valid
-    // });
+    console.log({
+      valid
+    });
 
     console.log('mounted component');
   }

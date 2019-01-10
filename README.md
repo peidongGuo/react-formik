@@ -42,3 +42,13 @@ react formik yup json-shema-to-yup typescript
     2. 将上述表单在不改变样式情况下转成formik组建
     3. 加入error信息判断
     4. 加一些其他事件
+> 完成
+
+### 2019.1.9
+    1. 思考如何创建动态表单？
+    > 依然需要json数据及其对应的jsonSchema。而且得封装自己的表单组件库。不同数据类型有自己的组件。所以用这两个库来解决动态表单创建和原来相比，没有什么先进性。
+    2. 实践一下<Field /> name render children component innerRef validate 
+
+### 2019.1.10
+    1. withFormik()
+    2. <Form /> 类似于 <form onReset={formikProps.handleReset} onSubmit={formikProps.handleSubmit} >{...props} />

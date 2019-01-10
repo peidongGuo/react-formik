@@ -4470,9 +4470,9 @@ json-parse-better-errors@^1.0.1:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/json-parse-better-errors/-/json-parse-better-errors-1.0.2.tgz#bb867cfb3450e69107c131d1c514bab3dc8bcaa9"
 
-json-schema-to-yup@^1.8.7:
-  version "1.8.7"
-  resolved "https://registry.yarnpkg.com/json-schema-to-yup/-/json-schema-to-yup-1.8.7.tgz#7502712b0060b99c224f56b0ecc89228c747b161"
+json-schema-to-yup@^1.8.8:
+  version "1.8.8"
+  resolved "https://registry.yarnpkg.com/json-schema-to-yup/-/json-schema-to-yup-1.8.8.tgz#94adf6471455cabd3054c1904b792d40b8555f87"
   dependencies:
     dashify "^2.0.0"
     uppercamelcase "^3.0.0"
